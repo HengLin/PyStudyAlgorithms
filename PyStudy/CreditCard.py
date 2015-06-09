@@ -60,7 +60,7 @@ if __name__ == '__main__':
 	wallet = []
 	wallet.append(CreditCard('John Bowman','California Savings', '5391 0375 9387 5309', 2500))
 	wallet.append(CreditCard('John Bowman','California Federal', '3485 0399 3395 1594', 3500))
-	wallet.append(CreditCard('John Bowman','California Finance', '5392 0375 9387 5309', 4500))
+	wallet.append(CreditCard('Heng Lin','California Finance', '5392 0375 9387 5309', 4500))
 
 	for val in range(1, 17):
 		wallet[0].charge(val)
