@@ -16,7 +16,7 @@ def readInChunks(fileObj, chunkSize=2048):
             break
         yield data
 
-f = open('fastapi-requests.log.1')
+f = open('bigfile')
 for chuck in readInChunks(f):
     count = count + 1
 
@@ -28,7 +28,7 @@ f.close()
 
 count = 0
 begin_time = datetime.datetime.now()
-f = open('fastapi-requests.log.1')
+f = open('bigfile')
 for line in f:
     count = count + 1
 
