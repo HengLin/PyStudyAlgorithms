@@ -2,6 +2,7 @@
 
 import datetime
 
+count = 0
 begin_time = datetime.datetime.now()
 
 def readInChunks(fileObj, chunkSize=2048):
@@ -15,14 +16,25 @@ def readInChunks(fileObj, chunkSize=2048):
             break
         yield data
 
-f = open('bigfile')
+f = open('fastapi-requests.log.1')
 for chuck in readInChunks(f):
-    """
-    nothing to do
-    """
+    count = count + 1
 
 end_time = datetime.datetime.now()
 total_time = end_time - begin_time
 
-print total_time.seconds
-print total_time
+print "chunk=%s, count=%i"%(total_time, count)
+f.close()
+
+count = 0
+begin_time = datetime.datetime.now()
+f = open('fastapi-requests.log.1')
+for line in f:
+    count = count + 1
+
+end_time = datetime.datetime.now()
+total_time = end_time - begin_time
+
+print "read=%s, count=%i"%(total_time, count)
+
+f.close()
