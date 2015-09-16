@@ -1,4 +1,4 @@
-#!/usr/bin/env pyhon
+#!/usr/bin/env python
 #Date: 04/18/2015
 
 class CreditCard:
