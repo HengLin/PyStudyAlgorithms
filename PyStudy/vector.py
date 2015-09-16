@@ -1,4 +1,4 @@
-#!/usr/bin/env pyhon
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 class Vector:
@@ -44,5 +44,6 @@ class Vector:
 if __name__ == '__main__':
 	v1 = Vector(2)
 	v2 = Vector(3)
+	print v1
 	print len(v1) 
 	print len(v2)
